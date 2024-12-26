@@ -5,10 +5,11 @@
 <h2>Hello {world}!</h2>
 
 <p>This is my NextWork web application working!</p>
+<p>A learning platform</p>
 
 </body>
 <footer>
-  &copy; All right reserved
+  &copy; All right reserved 
 </footer>
 
 </html>
