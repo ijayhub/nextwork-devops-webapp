@@ -9,7 +9,7 @@
 
 </body>
 <footer>
-  &copy; All right reserved 
+  &copy; All rights reserved 
 </footer>
 
 </html>
