@@ -3,19 +3,18 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8
+      java: corretto17
   pre_build:
     commands:
-      - echo Initializing environment
-      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain codebuild-ijay --domain-owner 830710131503 --query authorizationToken --output text`
+      - echo "Starting build process"
+      - mvn clean
   build:
     commands:
-      - echo Build started on `date`
-      - mvn -s settings.xml compile
+      - mvn package
   post_build:
     commands:
-      - echo Build completed on `date`
-      - mvn -s settings.xml package
+      - echo "Build completed"
+
 artifacts:
   files:
     - target/nextwork-web-project.war
